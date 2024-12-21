@@ -23,11 +23,8 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
-<<<<<<< HEAD
     "@nestjs/platform-socket.io": "^10.4.15",
     "@nestjs/websockets": "^10.4.15",
-=======
->>>>>>> ea6b7f919c1bc7353f64c89a15967ebf77d478ae
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
