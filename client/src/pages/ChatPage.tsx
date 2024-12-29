@@ -11,7 +11,7 @@ interface Contact {
 
 export interface FileUpload {
   fileName: string;
-  fileData: ArrayBuffer; // or a different type based on your needs
+  fileData: ArrayBuffer;
 }
 
 function ChatPage() {
@@ -111,10 +111,12 @@ function ChatPage() {
     newSocket?.on('connect', () => {
       setConnected(true);
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     getContacts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isConnected]);
 
   return (

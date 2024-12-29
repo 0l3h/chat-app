@@ -23,10 +23,6 @@ function Messages({ messages, deleteMessage, editMessage }: { messages: Message[
   const [newMessage, setNewMessage] = useState<string>('');
   const enterNewMessage = (e: React.ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)
 
-  const generateKey = () => {
-    return Math.random();
-  }
-  console.log(newMessage);
   return <>
     <ul className='flex flex-col gap-5 items-center w-full mx-auto max-h-screen overflow-y-scroll pb-20'>
       {

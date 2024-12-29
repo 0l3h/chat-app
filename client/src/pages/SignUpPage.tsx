@@ -5,7 +5,7 @@ function SignupPage() {
   const [phoneNumber, setPhoneNumber] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [username, setUsername] = useState<string>('');
-  const [confirmPassword, setConfirmPassword] = useState<string>('');
+  //const [confirmPassword, setConfirmPassword] = useState<string>('');
 
   const signup = () => {
     fetch("http://localhost:5000/auth/signup", {
