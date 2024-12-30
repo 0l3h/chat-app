@@ -23,7 +23,7 @@ function AuthPage({ children }: { children: React.ReactNode }) {
     const [token, setToken] = useState();
 
     const login = async (userData: User) => {
-        const userSession = await(await fetch("http://localhost:5000/auth/login", {
+        const userSession = await(await fetch(import.meta.env.PROD ? "https://server-production-3303.up.railway.app/auth/login" : "http://localhost:5000/auth/login", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
