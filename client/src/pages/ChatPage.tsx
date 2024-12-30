@@ -101,7 +101,7 @@ function ChatPage() {
   }
 
   useEffect(() => {
-    const newSocket = io(import.meta.env.PROD ? "https://server-production-3303.up.railway.app/" : "http://localhost:7000", {
+    const newSocket = io(import.meta.env.PROD ? "chat-server-production-c7e6.up.railway.app/" : "http://localhost:7000", {
       transports: ['websocket', 'polling', 'flashsocket'],
       auth: {
         token: auth.token
