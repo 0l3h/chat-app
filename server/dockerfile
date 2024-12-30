@@ -6,7 +6,8 @@ COPY . .
 
 RUN npm i
 
-EXPOSE ${DB_PORT}
+EXPOSE ${PORT}
+RUN echo $PORT
 
 RUN npx prisma migrate deploy
 RUN npm run build
