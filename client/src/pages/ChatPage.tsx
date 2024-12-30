@@ -55,7 +55,6 @@ function ChatPage() {
       socket?.emit("message", {authorId: auth.user?.id, receiverId: contactId, message});
 
     socket?.on('message', (m: Message) => {
-      console.log(m);
       setMessages([...messages, m]);
     })
 
@@ -76,8 +75,6 @@ function ChatPage() {
   }
 
   const getContacts = async () => {
-    console.log(auth.token);
-
     socket?.emit("get-contacts", { userId: auth.user?.id });
     socket?.on("get-contacts", (allContacts: Contact[]) => {
       setContacts(allContacts);

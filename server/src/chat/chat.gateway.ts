@@ -104,7 +104,6 @@ export class ChatGateway {
         },
       },
     });
-    console.log(createdMessage);
     this.server.emit('message', createdMessage);
   }
 
@@ -178,7 +177,6 @@ export class ChatGateway {
       contactPhoneNumber: string;
     },
   ) {
-    console.log(userId, contactPhoneNumber);
     const { id: contactId } = await this.prismaService.user.findUnique({
       where: {
         phoneNumber: contactPhoneNumber,
@@ -193,7 +191,6 @@ export class ChatGateway {
         contactId,
       },
     });
-    console.log(contact);
   }
 
   @UseGuards(AuthGuard)
@@ -201,7 +198,6 @@ export class ChatGateway {
   async handleDeleteMessage(
     @MessageBody() { messageId }: { messageId: number },
   ) {
-    console.log(messageId);
     await this.prismaService.message.delete({
       where: {
         id: messageId,
@@ -215,7 +211,6 @@ export class ChatGateway {
     @MessageBody()
     { messageId, newText }: { messageId: number; newText: string },
   ) {
-    console.log(messageId, newText);
     const updatedMessage = await this.prismaService.message.update({
       where: {
         id: messageId,
@@ -224,6 +219,5 @@ export class ChatGateway {
         text: newText,
       },
     });
-    console.log(updatedMessage);
   }
 }

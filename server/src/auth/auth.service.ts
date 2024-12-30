@@ -21,7 +21,6 @@ export class AuthService {
         phoneNumber,
       },
     });
-    console.log(user);
 
     const isCorrect = await bcrypt.compare(password, user.password);
 
