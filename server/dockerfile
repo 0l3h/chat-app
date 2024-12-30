@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm i
+RUN ./setup.sh
 
 EXPOSE ${PORT}
 
