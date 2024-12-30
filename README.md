@@ -9,3 +9,5 @@
 - Prisma
 - Railway (hosting)
 - Vite
+
+Project URL: https://chat-app-production-2301.up.railway.app/
