@@ -8,7 +8,7 @@ function SignupPage() {
   //const [confirmPassword, setConfirmPassword] = useState<string>('');
 
   const signup = () => {
-    fetch(import.meta.env.PROD ? "https://server-production-3303.up.railway.app/": "http://localhost:5000/auth/signup", {
+    fetch(import.meta.env.PROD ? "https://server-production-3303.up.railway.app/auth/signup": "http://localhost:5000/auth/signup", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
