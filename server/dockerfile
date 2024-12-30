@@ -7,9 +7,5 @@ COPY . .
 RUN npm i
 
 EXPOSE ${PORT}
-RUN echo $PORT
-
-RUN npx prisma migrate deploy
-RUN npm run build
 
 CMD ["npm", "run", "start:prod"]
