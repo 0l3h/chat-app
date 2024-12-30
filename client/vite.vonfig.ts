@@ -6,11 +6,9 @@ export default defineConfig({
     plugins: [react()],
     server: {
         host: true,
-        port: 5000
     },
     preview: {
         host: true,
-        port: 5000
     },
     css: {
         postcss: {
